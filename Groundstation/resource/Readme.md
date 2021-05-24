@@ -1,0 +1,1 @@
+resource for the gsc
