@@ -1,0 +1,2175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2123</width>
+    <height>894</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>SPOROS#3571::GROUNDSTATION</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../S__11739139.jpg</normaloff>../S__11739139.jpg</iconset>
+  </property>
+  <property name="toolTip">
+   <string/>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Rounded</enum>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(56,58,89);</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_5">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <family>Sukhumvit Set</family>
+        <pointsize>18</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(220, 220, 220);
+border-color: rgb(255, 255, 255);
+background-color: rgb(56, 58, 89);
+boarder-radius: 10px;</string>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_1">
+       <property name="font">
+        <font/>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(56, 58, 89);</string>
+       </property>
+       <attribute name="title">
+        <string>MAIN</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_6">
+        <item row="11" column="19" colspan="2">
+         <widget class="QLabel" name="C_GIS">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>20</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 79, 82);</string>
+          </property>
+          <property name="text">
+           <string>&lt;strong&gt;CONTAINER</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="19">
+         <widget class="QLabel" name="C_Glatitude_1">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Latitude</string>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="19">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>GPS Time:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="31" column="2" colspan="3">
+         <widget class="QLabel" name="TimeElapsed">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>20</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>HH:MM:SS.ms</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" colspan="8">
+         <widget class="QLabel" name="Softwarestate">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>20</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 79, 82);</string>
+          </property>
+          <property name="text">
+           <string>Software State</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QProgressBar" name="State_Prelaunch">
+          <property name="styleSheet">
+           <string notr="true">QProgressBar{
+	backgroundcolor:rgb(98,114,164);
+	color:rgb(200,200,200);
+	boder-style: none;
+	boder-radius: 10px;
+}
+QProgressBar::chunk{
+	border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
+}</string>
+          </property>
+          <property name="maximum">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="20">
+         <widget class="QLabel" name="C_Gla">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>00.000000000000000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="19" colspan="2">
+         <widget class="QLabel" name="PC_GIS">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>20</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 79, 82);</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;GROUND STATION&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="20">
+         <widget class="QLabel" name="C_Gs">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="27" column="0" colspan="2">
+         <widget class="QProgressBar" name="SP2_RE">
+          <property name="styleSheet">
+           <string notr="true">QProgressBar{
+	backgroundcolor:rgb(98,114,164);
+	color:rgb(200,200,200);
+	boder-style: none;
+	boder-radius: 10px;
+}
+QProgressBar::chunk{
+	border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
+}</string>
+          </property>
+          <property name="maximum">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="19">
+         <widget class="QLabel" name="C_Glongtitude">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Longtitude</string>
+          </property>
+         </widget>
+        </item>
+        <item row="18" column="19">
+         <widget class="QLabel" name="PC_Latitude">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Latitude</string>
+          </property>
+         </widget>
+        </item>
+        <item row="20" column="19">
+         <widget class="QLabel" name="PC_Gnddis">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Ground distance:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="26" column="0">
+         <widget class="QLabel" name="SP2_Packetcount">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Packetcount</string>
+          </property>
+         </widget>
+        </item>
+        <item row="15" column="19">
+         <widget class="QLabel" name="C_Gsats">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Sats:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="20" column="20">
+         <widget class="QLabel" name="PC_Gd">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="19" column="19">
+         <widget class="QLabel" name="PC_Longtitude">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Longtitude</string>
+          </property>
+         </widget>
+        </item>
+        <item row="19" column="20">
+         <widget class="QLabel" name="PC_lon">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>000.00000000000000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="20">
+         <widget class="QLabel" name="C_Glo">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>000.00000000000000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="25" column="0" colspan="2">
+         <widget class="QLabel" name="Payload2">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>18</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 79, 82);</string>
+          </property>
+          <property name="text">
+           <string>&lt;STRONG&gt;PAYLOAD2</string>
+          </property>
+         </widget>
+        </item>
+        <item row="18" column="20">
+         <widget class="QLabel" name="PC_la">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>00.000000000000000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="18" column="1">
+         <widget class="QLabel" name="SP1_P">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="14" rowspan="5" colspan="5">
+         <widget class="PlotWidget" name="C_Ga" native="true">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="2" rowspan="4" colspan="5">
+         <widget class="PlotWidget" name="SP1_A" native="true">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="8" rowspan="4" colspan="6">
+         <widget class="PlotWidget" name="SP1_T" native="true">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="25" column="2" rowspan="4" colspan="5">
+         <widget class="PlotWidget" name="SP2_A" native="true">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="8" rowspan="5" colspan="6">
+         <widget class="PlotWidget" name="C_T" native="true">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="25" column="8" rowspan="4" colspan="6">
+         <widget class="PlotWidget" name="SP2_T" native="true">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="26" column="19" rowspan="4" colspan="2">
+         <widget class="QFrame" name="logo">
+          <property name="styleSheet">
+           <string notr="true">
+image: url(:/Untitled-jhh1.png);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="2" rowspan="5" colspan="5">
+         <widget class="PlotWidget" name="C_A" native="true">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="25" column="14" rowspan="4" colspan="5">
+         <widget class="PlotWidget" name="SP2_Ro" native="true">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="14" rowspan="4" colspan="5">
+         <widget class="PlotWidget" name="SP1_Ro" native="true">
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="0" colspan="20">
+         <widget class="Line" name="line_2">
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>5</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="Launched">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Launched</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="31" column="8" colspan="4">
+         <widget class="QLabel" name="Time">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>20</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>HH:MM:SS.ms</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="8">
+         <widget class="QPushButton" name="Stop">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>Stop</string>
+          </property>
+         </widget>
+        </item>
+        <item row="17" column="0" colspan="2">
+         <widget class="QLabel" name="Payload1">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>18</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 79, 82);</string>
+          </property>
+          <property name="text">
+           <string>&lt;STRONG&gt;PAYLOAD1</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QComboBox" name="PORTSelecter">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(98, 114, 164);</string>
+          </property>
+          <item>
+           <property name="text">
+            <string>COM 0</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="0" column="12" colspan="2">
+         <widget class="QLabel" name="command_t">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>22</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 79, 82);</string>
+          </property>
+          <property name="text">
+           <string>COMMAND</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="PORT">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>PORT</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QProgressBar" name="State_launch">
+          <property name="styleSheet">
+           <string notr="true">QProgressBar{
+	backgroundcolor:rgb(98,114,164);
+	color:rgb(200,200,200);
+	boder-style: none;
+	boder-radius: 10px;
+}
+QProgressBar::chunk{
+	border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
+}</string>
+          </property>
+          <property name="maximum">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="Prelaunch">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Prelaunch</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="6">
+         <widget class="QPushButton" name="Start">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>Start</string>
+          </property>
+         </widget>
+        </item>
+        <item row="26" column="1">
+         <widget class="QLabel" name="SP2_P">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="2">
+         <widget class="QLabel" name="MODE">
+          <property name="font">
+           <font>
+            <pointsize>16</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>MODE:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="17" colspan="2">
+         <widget class="QLineEdit" name="PRESSURE_INPUT">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>8</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(255, 255, 255);
+color: rgb(0, 0, 0);</string>
+          </property>
+         </widget>
+        </item>
+        <item row="18" column="0">
+         <widget class="QLabel" name="SP1_Packetcount">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Packetcount</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="14" colspan="3">
+         <widget class="QLabel" name="SP1_Rotation">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ROTATION RATE(rpm)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="15" colspan="2">
+         <widget class="QLabel" name="C_echo">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>-</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="6">
+         <widget class="QLabel" name="C_alt">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="2" colspan="4">
+         <widget class="QLabel" name="SP1_Altitude">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ALTITUDE (m)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3" colspan="2">
+         <widget class="QLabel" name="Mo">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>16</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>FLIGHT</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="0" colspan="2">
+         <widget class="QLabel" name="Container">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>18</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+            <underline>false</underline>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 79, 82);</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;CONTAINER&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="6">
+         <widget class="QLabel" name="SP2_Released">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>SP2_released</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="6">
+         <widget class="QProgressBar" name="State_Sp2">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QProgressBar{
+	backgroundcolor:rgb(98,114,164);
+	color:rgb(200,200,200);
+	boder-style: none;
+	boder-radius: 10px;
+}
+QProgressBar::chunk{
+	border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
+}</string>
+          </property>
+          <property name="maximum">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="0">
+         <widget class="QLabel" name="C_Voltage">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Voltage</string>
+          </property>
+         </widget>
+        </item>
+        <item row="19" column="0" colspan="2">
+         <widget class="QProgressBar" name="SP1_RE">
+          <property name="styleSheet">
+           <string notr="true">QProgressBar{
+	backgroundcolor:rgb(98,114,164);
+	color:rgb(200,200,200);
+	boder-style: none;
+	boder-radius: 10px;
+}
+QProgressBar::chunk{
+	border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
+}</string>
+          </property>
+          <property name="maximum">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="31" column="6">
+         <widget class="QLabel" name="Currenttime">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>22</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TIME:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="6">
+         <widget class="QLabel" name="SP2_alt">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="31" column="0" colspan="2">
+         <widget class="QLabel" name="ELAPSED">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>22</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ELAPSED:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="0">
+         <widget class="QLabel" name="C_Packetcount">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Packetcount</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="2">
+         <widget class="QProgressBar" name="State_cansat">
+          <property name="styleSheet">
+           <string notr="true">QProgressBar{
+	backgroundcolor:rgb(98,114,164);
+	color:rgb(200,200,200);
+	boder-style: none;
+	boder-radius: 10px;
+}
+QProgressBar::chunk{
+	border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
+}</string>
+          </property>
+          <property name="maximum">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QProgressBar" name="State_Sp1">
+          <property name="styleSheet">
+           <string notr="true">QProgressBar{
+	backgroundcolor:rgb(98,114,164);
+	color:rgb(200,200,200);
+	boder-style: none;
+	boder-radius: 10px;
+}
+QProgressBar::chunk{
+	border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
+}</string>
+          </property>
+          <property name="maximum">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="6">
+         <widget class="QLabel" name="SP1_alt">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="2">
+         <widget class="QLabel" name="Cansat_realesed">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Cansat released</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="1">
+         <widget class="QLabel" name="C_P">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="17" colspan="2">
+         <widget class="QLabel" name="C_Galt">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="8">
+         <widget class="QProgressBar" name="State_Land">
+          <property name="styleSheet">
+           <string notr="true">QProgressBar{
+	backgroundcolor:rgb(98,114,164);
+	color:rgb(200,200,200);
+	boder-style: none;
+	boder-radius: 10px;
+}
+QProgressBar::chunk{
+	border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
+}</string>
+          </property>
+          <property name="maximum">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="8">
+         <widget class="QLabel" name="Landed">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Landed</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="31" column="19" colspan="2">
+         <widget class="QLabel" name="TEAM_ID">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>14</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(220, 220, 220);</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="text">
+           <string>&lt;STRONG&gt;SPOROS #3571</string>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="13" column="1">
+         <widget class="QLabel" name="C_V">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="19" colspan="2">
+         <widget class="QPushButton" name="SIMPRESSURE">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>SIM PRESSURE</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="2" colspan="4">
+         <widget class="QLabel" name="C_Altitude">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ALTITUDE (m)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="25" column="19">
+         <widget class="QLabel" name="ELEVATION">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ELEVATION:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="25" column="20">
+         <widget class="QLabel" name="Elev">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4" colspan="2">
+         <widget class="QLabel" name="SP1_released">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>SP1_released</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="14" colspan="3">
+         <widget class="QLabel" name="SP2_Rotation">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ROTATION RATE(rpm)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="14" colspan="3">
+         <widget class="QLabel" name="C_GpsAltitude">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>GPS_ALTITUDE (m)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="20">
+         <widget class="QLabel" name="Azim">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="31" column="14" colspan="5">
+         <widget class="QLabel" name="copyright">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>6</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>USA CANSAT 2021 Groundcontrol station interface ver 0.1.0,Space AC</string>
+          </property>
+         </widget>
+        </item>
+        <item row="14" column="0" colspan="2">
+         <widget class="QProgressBar" name="C_Re">
+          <property name="styleSheet">
+           <string notr="true">QProgressBar{
+	backgroundcolor:rgb(98,114,164);
+	color:rgb(200,200,200);
+	boder-style: none;
+	boder-radius: 10px;
+}
+QProgressBar::chunk{
+	border-radius: 10px;
+	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
+}</string>
+          </property>
+          <property name="maximum">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>1</number>
+          </property>
+          <property name="textVisible">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="19">
+         <widget class="QLabel" name="AZIMUTH">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>AZIMUTH:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="12" column="20">
+         <widget class="QLabel" name="C_Gt">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="19">
+         <widget class="QPushButton" name="SIM_DIS">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>SIM DISABLE</string>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="2" colspan="3">
+         <widget class="QLabel" name="SP2_Altitude">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>ALTITUDE (m)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="20">
+         <widget class="QPushButton" name="SIM_EN">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>SIM ENABLE</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="13" colspan="2">
+         <widget class="QPushButton" name="CXON">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>CX ON</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="8" colspan="4">
+         <widget class="QLabel" name="C_Temperatue">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TEMPERATURE (C)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="13" colspan="2">
+         <widget class="QLabel" name="Lastcommand_t">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>LAST COMMAND SEND:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="16" column="12" colspan="2">
+         <widget class="QLabel" name="C_temp">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="17" colspan="2">
+         <widget class="QPushButton" name="SPX2ON">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>PAYLOAD2 ON</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="15" colspan="2">
+         <widget class="QPushButton" name="SPX1OFF">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>PAYLOAD1 OFF</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="13" colspan="2">
+         <widget class="QPushButton" name="CXOFF">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>CX OFF</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="17" colspan="2">
+         <widget class="QLabel" name="SP1_Ro_2">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="19">
+         <widget class="QPushButton" name="SET_TIME">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>SET TIME</string>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="12" colspan="2">
+         <widget class="QLabel" name="SP2_temp">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="17" colspan="2">
+         <widget class="QPushButton" name="SPX2OFF">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>PAYLOAD2 OFF</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="15" colspan="2">
+         <widget class="QPushButton" name="SPX1ON">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>PAYLOAD1 ON</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="9" colspan="4">
+         <widget class="QPushButton" name="refresh">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>Refresh</string>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="8" colspan="4">
+         <widget class="QLabel" name="SP2_Temperature">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TEMPERATURE (C)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="20">
+         <widget class="QPushButton" name="SIM_AC">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string>background-color: rgb(98, 114, 164);</string>
+          </property>
+          <property name="text">
+           <string>SIM ACTIVATE</string>
+          </property>
+         </widget>
+        </item>
+        <item row="29" column="17" colspan="2">
+         <widget class="QLabel" name="SP2_Ro_2">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="12" colspan="2">
+         <widget class="QLabel" name="SP1_temp">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="text">
+           <string>0.00</string>
+          </property>
+         </widget>
+        </item>
+        <item row="21" column="8" colspan="4">
+         <widget class="QLabel" name="SP1_Temperature">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>12</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>TEMPERATURE (C)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="14" colspan="7">
+         <widget class="Line" name="line">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>5</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>MAP</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0" rowspan="2">
+         <widget class="QWebEngineView" name="C_Map">
+          <property name="url">
+           <url>
+            <string>about:blank</string>
+           </url>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Data</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="Datatable">
+          <property name="font">
+           <font>
+            <family>Sukhumvit Set</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+color: rgb(255, 255, 0);</string>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QAbstractScrollArea::AdjustIgnored</enum>
+          </property>
+          <property name="rowCount">
+           <number>1</number>
+          </property>
+          <property name="columnCount">
+           <number>25</number>
+          </property>
+          <attribute name="horizontalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <row/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <column/>
+          <item row="0" column="0">
+           <property name="text">
+            <string>TEAM_ID</string>
+           </property>
+          </item>
+          <item row="0" column="1">
+           <property name="text">
+            <string>MISSION_TIME</string>
+           </property>
+          </item>
+          <item row="0" column="2">
+           <property name="text">
+            <string>PACKETCOUNT</string>
+           </property>
+          </item>
+          <item row="0" column="3">
+           <property name="text">
+            <string>PACKET_TYPE</string>
+           </property>
+          </item>
+          <item row="0" column="4">
+           <property name="text">
+            <string>MODE</string>
+           </property>
+          </item>
+          <item row="0" column="5">
+           <property name="text">
+            <string>SP1_RELEASED</string>
+           </property>
+          </item>
+          <item row="0" column="6">
+           <property name="text">
+            <string>SP2_RELEASED</string>
+           </property>
+          </item>
+          <item row="0" column="7">
+           <property name="text">
+            <string>ALTITUDE</string>
+           </property>
+          </item>
+          <item row="0" column="8">
+           <property name="text">
+            <string>TEMP</string>
+           </property>
+          </item>
+          <item row="0" column="9">
+           <property name="text">
+            <string>VOLTAGE</string>
+           </property>
+          </item>
+          <item row="0" column="10">
+           <property name="text">
+            <string>GPS_TIME</string>
+           </property>
+          </item>
+          <item row="0" column="11">
+           <property name="text">
+            <string>GPS_LATITUDE</string>
+           </property>
+          </item>
+          <item row="0" column="12">
+           <property name="text">
+            <string>GPS_LONGTITUDE</string>
+           </property>
+          </item>
+          <item row="0" column="13">
+           <property name="text">
+            <string>GPS_ALTITUDE</string>
+           </property>
+          </item>
+          <item row="0" column="14">
+           <property name="text">
+            <string>GPS_SATS</string>
+           </property>
+          </item>
+          <item row="0" column="15">
+           <property name="text">
+            <string>SW_STATE</string>
+           </property>
+          </item>
+          <item row="0" column="16">
+           <property name="text">
+            <string>SP1_PACKETCOUNT</string>
+           </property>
+          </item>
+          <item row="0" column="17">
+           <property name="text">
+            <string>SP2PACKETCOUNT</string>
+           </property>
+          </item>
+          <item row="0" column="18">
+           <property name="text">
+            <string>CMD_ECHO</string>
+           </property>
+          </item>
+          <item row="0" column="19">
+           <property name="text">
+            <string>SP1_ALTITUDE</string>
+           </property>
+          </item>
+          <item row="0" column="20">
+           <property name="text">
+            <string>SP1_TEMP</string>
+           </property>
+          </item>
+          <item row="0" column="21">
+           <property name="text">
+            <string>SP1_ROTATION</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>Sukhumvit Set</family>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="textAlignment">
+            <set>AlignCenter</set>
+           </property>
+          </item>
+          <item row="0" column="22">
+           <property name="text">
+            <string>SP2_ALTITUDE</string>
+           </property>
+          </item>
+          <item row="0" column="23">
+           <property name="text">
+            <string>SP2_TEMP</string>
+           </property>
+           <property name="font">
+            <font>
+             <family>Sukhumvit Set</family>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+          </item>
+          <item row="0" column="24">
+           <property name="text">
+            <string>SP2_ROTATION</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <action name="actionsave">
+   <property name="text">
+    <string>save</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebEngineView</class>
+   <extends>QWidget</extends>
+   <header location="global">QtWebEngineWidgets/QWebEngineView</header>
+  </customwidget>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QWidget</extends>
+   <header>pyqtgraph</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

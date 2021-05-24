@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Table</class>
+ <widget class="QWidget" name="Table">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1132</width>
+    <height>834</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TABLE</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QFrame" name="BG">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(56, 58, 89);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="TitleBar">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>80</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QFrame" name="frame_5">
+           <property name="minimumSize">
+            <size>
+             <width>80</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>80</width>
+             <height>80</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/logo/Untitled-jhh1.png);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="TeamName">
+           <property name="font">
+            <font>
+             <family>JetBrains Mono</family>
+             <pointsize>36</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>SPOROS#3751::TABLE</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_minimize">
+           <property name="minimumSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton {
+background-color: rgb(0, 255, 0);
+border-radius: 7px;
+}
+QPushButton:hover {
+background-color: rgb(0, 154, 0);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_restore">
+           <property name="minimumSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color: rgb(255, 255, 0);
+border-radius: 7px;
+}
+QPushButton:hover {
+background-color: rgb(208, 208, 0);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btn_close">
+           <property name="minimumSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>15</width>
+             <height>15</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color: rgb(255, 0, 0);
+border-radius: 7px;
+}
+QPushButton:hover {
+background-color: rgb(185, 0, 0);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_4">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QTabWidget" name="tabWidget">
+           <property name="styleSheet">
+            <string notr="true">border-color: rgb(56, 58, 89);
+border-right-color: rgb(56, 58, 89);
+border-bottom-color: rgb(56, 58, 89);
+gridline-color: rgb(56, 58, 89);
+color: rgb(152, 158, 241);
+font: 81 10pt &quot;JetBrains Mono&quot;;</string>
+           </property>
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="tab">
+            <attribute name="title">
+             <string>CONTAINER</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QTableWidget" name="CTable">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(152, 158, 241);
+</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+               <property name="lineWidth">
+                <number>0</number>
+               </property>
+               <property name="sizeAdjustPolicy">
+                <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+               </property>
+               <property name="showGrid">
+                <bool>true</bool>
+               </property>
+               <property name="gridStyle">
+                <enum>Qt::SolidLine</enum>
+               </property>
+               <property name="cornerButtonEnabled">
+                <bool>true</bool>
+               </property>
+               <property name="rowCount">
+                <number>2</number>
+               </property>
+               <property name="columnCount">
+                <number>17</number>
+               </property>
+               <attribute name="horizontalHeaderCascadingSectionResizes">
+                <bool>false</bool>
+               </attribute>
+               <row/>
+               <row/>
+               <column>
+                <property name="text">
+                 <string>TEAMID</string>
+                </property>
+                <property name="background">
+                 <color>
+                  <red>255</red>
+                  <green>255</green>
+                  <blue>255</blue>
+                 </color>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>MISSION_TIME</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>PACKET_COUNT</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>PACKET_TYPE</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>MODE</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>SP1_R</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>SP2_R</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>ALTITUDE</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>TEMP</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>BATTERY</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>GPS_LATITUDE</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>GPS_LONGITUDE</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>GPS_ALTITUDE</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>GPS_SATS</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>SW_STATE</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>SP1_PACKET</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>CMD_ECHO</string>
+                </property>
+               </column>
+               <item row="0" column="0">
+                <property name="text">
+                 <string/>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_2">
+            <attribute name="title">
+             <string>PAYLOAD1</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_6">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QTableWidget" name="S1Table">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(152, 158, 241);</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+               <property name="rowCount">
+                <number>0</number>
+               </property>
+               <property name="columnCount">
+                <number>7</number>
+               </property>
+               <column>
+                <property name="text">
+                 <string>TEAMID</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>MISSION_TIME</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>PACKET_COUNT</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>PACKET_TYPE</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>ALTITUDE</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>TEMP</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>ROTATION</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+           <widget class="QWidget" name="tab_3">
+            <attribute name="title">
+             <string>PAYLOAD2</string>
+            </attribute>
+            <layout class="QGridLayout" name="gridLayout_5">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item row="0" column="0">
+              <widget class="QTableWidget" name="S2Table">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(152, 158, 241);</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+               <property name="rowCount">
+                <number>0</number>
+               </property>
+               <property name="columnCount">
+                <number>7</number>
+               </property>
+               <column>
+                <property name="text">
+                 <string>TEAMID</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>MISSION_TIME</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>PACKET_COUNT</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>PACKET_TYPE</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>ALTITUDE</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>TEMP</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>ROTATION</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame_3">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="copyright">
+           <property name="font">
+            <font>
+             <family>Montserrat ExtraBold</family>
+             <pointsize>10</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="text">
+            <string>USA CANSAT 2021 GCS ver.2.0.1 Space AC : Team SPOROS by Pop</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="recource.qrc"/>
+ </resources>
+ <connections/>
+</ui>
