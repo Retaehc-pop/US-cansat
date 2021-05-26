@@ -236,7 +236,7 @@ class Ui_MainWindow(object):
 "    border-radius: 10px;\n"
 "    background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))\n"
 "}")
-        self.StateBar.setMaximum(6)
+        self.StateBar.setMaximum(5)
         self.StateBar.setProperty("value", 5)
         self.StateBar.setAlignment(QtCore.Qt.AlignCenter)
         self.StateBar.setTextVisible(False)

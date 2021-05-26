@@ -1,6 +1,7 @@
 import serial
 import os
 import time
+from datetime import datetime,date
 
 
 
@@ -45,17 +46,12 @@ class Port:
 
     def path(self):
         self.PATH = []
-        datano = 0
-        while os.path.exists(self.joinpath(f"Flight_3571_C-{datano}.csv")):
-            datano += 1
+        stime = datetime.now().time()
+        today = date.today()
+        timestp = str('%02d' % stime.hour) + '_' + str('%02d' % stime.minute)
+        datano = str(timestp) + '_' + str(today.strftime("%b-%d-%Y"))
         self.PATH.append(self.joinpath(f"Flight_3571_C-{datano}.csv"))
-        datano = 0
-        while os.path.exists(self.joinpath(f"Flight_3571_SP1-{datano}.csv")):
-            datano += 1
         self.PATH.append(self.joinpath(f"Flight_3571_SP1-{datano}.csv"))
-        datano = 0
-        while os.path.exists(self.joinpath(f"Flight_3571_SP2-{datano}.csv")):
-            datano += 1
         self.PATH.append(self.joinpath(f"Flight_3571_SP2-{datano}.csv"))
 
     @staticmethod
@@ -99,7 +95,6 @@ class Port:
                     # checkdata
                     print(f"[READING] : {Data}")
                     if Data[3] == 'C':
-                        print("inc")
                         # Data[2] = self.isInt(Data[2])  # packetcount
                         # Data[4] = self.isChar(Data[4])  # flightmode
                         # Data[5] = self.isChar(Data[5])  # sp1r
@@ -156,5 +151,6 @@ class Port:
 
 if __name__ == "__main__":
     A = Port('COM11')
-    A.connect_port(9600)
-    print(A.reading())
+    A.path()
+    print(A.PATH)
+

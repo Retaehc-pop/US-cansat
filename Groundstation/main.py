@@ -455,7 +455,7 @@ class ScreenActivation:
         try:
             graph.plot(x, y)
         except:
-            print(f"graph{graph} error-----------------------")
+            print(f"graph : {graph} error-----------------------")
 
     def update_table(self, data):
         self.ui_main.ui.table.setRowCount(self.ui_main.ui.table.rowCount() + 1)
