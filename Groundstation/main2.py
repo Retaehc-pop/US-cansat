@@ -67,7 +67,7 @@ class MainWindow(QMainWindow):
         self.ui.btn_simactivate.clicked.connect(lambda: self.sendcmd('SIM', 'ACTIVATE'))
         self.ui.btn_simenable.clicked.connect(lambda: self.sendcmd('SIM', 'ENABLE'))
         self.ui.btn_simdisable.clicked.connect(lambda: self.sendcmd('SIM', 'DISABLE'))
-        self.ui.btn_settime.clicked.connect(lambda: self.sendcmd('ST', GetTime.time_pc()))
+        self.ui.btn_settime.clicked.connect(lambda: self.sendcmd('ST', GetTime.time_UTC()))
         self.ui.btn_sendpressure.clicked.connect(lambda: self.thread())
 
     def clear(self):

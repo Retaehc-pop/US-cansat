@@ -21,7 +21,12 @@ class GetTime:
         else:
             timestp = str('%02d' % stime.hour) + ':' + str('%02d' % stime.minute) + \
                       ':' + str('%02d' % stime.second) + '.' + str(stime.microsecond)[0:2]
-        time.sleep(0.01)
+        return timestp
+
+    @staticmethod
+    def time_UTC():
+        stime = datetime.now().time()
+        timestp = str('%02d' % stime.hour) + ':' + str('%02d' % stime.minute) + ':' + str('%02d' % stime.second)
         return timestp
 
     def time_elapsed(self):
