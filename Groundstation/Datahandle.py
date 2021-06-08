@@ -95,21 +95,7 @@ class Port:
                     # checkdata
                     print(f"[READING] : {Data}")
                     if Data[3] == 'C':
-                        # Data[2] = self.isInt(Data[2])  # packetcount
-                        # Data[4] = self.isChar(Data[4])  # flightmode
-                        # Data[5] = self.isChar(Data[5])  # sp1r
-                        # Data[6] = self.isChar(Data[6])  # sp2r
-                        # Data[7] = self.isFloat(Data[7])  # altitude
-                        # Data[8] = self.isFloat(Data[8])  # temp
-                        # Data[9] = self.isFloat(Data[9])  # voltage
-                        # Data[11] = self.isFloat(Data[11])  # lat
-                        # Data[12] = self.isFloat(Data[12])  # long
-                        # Data[13] = self.isFloat(Data[13])  # Galt
-                        # Data[14] = self.isInt(Data[14])  # Gsat
-                        # Data[15] = self.isChar(Data[15])  # state
-                        # Data[16] = self.isInt(Data[16])  # sp1count
-                        # Data[17] = self.isInt(Data[17])  # sp2count
-                        # Data[18] = self.isChar(Data[18])  # echo
+
                         with open(self.PATH[0], 'a') as file:
                             for i in range(len(Data)):
                                 file.write(Data[i])
