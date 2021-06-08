@@ -258,9 +258,11 @@ class ThreadTimer(QThread):
 class ScreenActivation:
     def __init__(self):
         self.show_splash()
+
         self.send = False
 
     def clear(self):
+
         self.teamid = "3751"
         self.c_time = "HH:MM:SS.MS"
         self.c_pkg = 0
@@ -331,6 +333,10 @@ class ScreenActivation:
         self.window_ui = QtWidgets.QMainWindow()
         self.ui_main = MainWindow()
         self.clear()
+        self.table = (self.ui_main.ui.IN_0,self.ui_main.ui.IN_1,self.ui_main.ui.IN_2,self.ui_main.ui.IN_3,self.ui_main.ui.IN_4,
+                      self.ui_main.ui.IN_5,self.ui_main.ui.IN_6,self.ui_main.ui.IN_7,self.ui_main.ui.IN_8,self.ui_main.ui.IN_9,
+                      self.ui_main.ui.IN_10,self.ui_main.ui.IN_11,self.ui_main.ui.IN_12,self.ui_main.ui.IN_13,self.ui_main.ui.IN_14,
+                      self.ui_main.ui.IN_15,self.ui_main.ui.IN_16,self.ui_main.ui.IN_17,self.ui_main.ui.IN_18,self.ui_main.ui.IN_19,)
         print('[MAINWINDOW]',end="")
 
     def start_clock(self):
@@ -506,9 +512,17 @@ class ScreenActivation:
             self.worker_graph.terminate()
 
     def update_table(self, data):
-        self.ui_main.ui.table.setRowCount(self.ui_main.ui.table.rowCount() + 1)
-        for colum, value in enumerate(data):
-            self.ui_main.ui.table.setItem(self.ui_main.ui.table.rowCount() - 1, colum, QTableWidgetItem(str(value)))
+        try:
+            l = len(self.table)-len(data)
+            for i in range(len(data)):
+                self.table[i].setText(str(data[i]))
+            for i in range(l):
+                self.table[len(data)+i].setText(" ")
+        except:
+            for i in range(len(self.table)):
+                self.table[len(data)+i].setText(" ")
+
+
 
     def update_map(self):
         print("[UPDATEMAP]")

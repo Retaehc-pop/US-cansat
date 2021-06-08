@@ -489,7 +489,7 @@ QProgressBar::chunk{
 }</string>
                  </property>
                  <property name="maximum">
-                  <number>6</number>
+                  <number>5</number>
                  </property>
                  <property name="value">
                   <number>5</number>
@@ -997,6 +997,42 @@ QProgressBar::chunk{
                  </property>
                 </widget>
                </item>
+               <item row="0" column="8" colspan="2">
+                <widget class="QLabel" name="t_gis">
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 79, 82);</string>
+                 </property>
+                 <property name="text">
+                  <string>GIS</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="12" column="4" colspan="2">
+                <widget class="QLabel" name="elapsed_clock">
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>18</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>HH:MM:SS.MS</string>
+                 </property>
+                </widget>
+               </item>
                <item row="2" column="1">
                 <widget class="QLabel" name="battery_c">
                  <property name="minimumSize">
@@ -1030,27 +1066,6 @@ QProgressBar::chunk{
                  </property>
                 </widget>
                </item>
-               <item row="0" column="8" colspan="2">
-                <widget class="QLabel" name="t_gis">
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>20</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 79, 82);</string>
-                 </property>
-                 <property name="text">
-                  <string>GIS</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
                <item row="7" column="2">
                 <widget class="QLabel" name="t_p1alt">
                  <property name="minimumSize">
@@ -1078,21 +1093,6 @@ QProgressBar::chunk{
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="12" column="4" colspan="2">
-                <widget class="QLabel" name="elapsed_clock">
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>18</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>HH:MM:SS.MS</string>
                  </property>
                 </widget>
                </item>
@@ -1138,39 +1138,6 @@ QProgressBar::chunk{
                  </property>
                  <property name="text">
                   <string>CONTAINER</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="7">
-                <widget class="QLabel" name="gpsalt_c">
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(85, 170, 127);</string>
-                 </property>
-                 <property name="text">
-                  <string>-00.00-</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1294,6 +1261,39 @@ QProgressBar::chunk{
                  </property>
                 </widget>
                </item>
+               <item row="4" column="7">
+                <widget class="QLabel" name="gpsalt_c">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 170, 127);</string>
+                 </property>
+                 <property name="text">
+                  <string>-00.00-</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
                <item row="6" column="1">
                 <widget class="QLabel" name="pkg_p1">
                  <property name="minimumSize">
@@ -1327,68 +1327,8 @@ QProgressBar::chunk{
                  </property>
                 </widget>
                </item>
-               <item row="8" column="8" rowspan="3">
-                <widget class="QTableWidget" name="table">
-                 <property name="styleSheet">
-                  <string notr="true">background-color: rgb(56, 58, 89);
-alternate-background-color: rgb(56, 58, 89);
-color: rgb(255, 255, 255);
-font: 81 8pt &quot;JetBrains Mono ExtraBold&quot;;
-gridline-color: rgb(255, 255, 255);</string>
-                 </property>
-                 <property name="rowCount">
-                  <number>1</number>
-                 </property>
-                 <property name="columnCount">
-                  <number>25</number>
-                 </property>
-                 <attribute name="horizontalHeaderVisible">
-                  <bool>true</bool>
-                 </attribute>
-                 <attribute name="horizontalHeaderHighlightSections">
-                  <bool>false</bool>
-                 </attribute>
-                 <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-                  <bool>false</bool>
-                 </attribute>
-                 <attribute name="verticalHeaderVisible">
-                  <bool>false</bool>
-                 </attribute>
-                 <row/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <column/>
-                 <item row="0" column="0">
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-               <item row="5" column="4" rowspan="2" colspan="2">
-                <widget class="PlotWidget" name="P1_TempGraph" native="true">
+               <item row="0" column="6" rowspan="3" colspan="2">
+                <widget class="PlotWidget" name="C_GpsAltitudeGraph" native="true">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
@@ -1411,274 +1351,8 @@ gridline-color: rgb(255, 255, 255);</string>
                  </property>
                 </widget>
                </item>
-               <item row="8" column="6" rowspan="2" colspan="2">
-                <widget class="PlotWidget" name="P2_RotationGraph" native="true">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                </widget>
-               </item>
-               <item row="7" column="0" colspan="2">
-                <widget class="QProgressBar" name="PL1Bar">
-                 <property name="minimumSize">
-                  <size>
-                   <width>300</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QProgressBar{
-	
-	background-color: rgb(107, 125, 180);
-	border-radius: 15px;
-}
-QProgressBar::chunk{
-	border-radius: 15px;
-	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
-}</string>
-                 </property>
-                 <property name="maximum">
-                  <number>0</number>
-                 </property>
-                 <property name="value">
-                  <number>0</number>
-                 </property>
-                 <property name="textVisible">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-               <item row="7" column="6">
-                <widget class="QLabel" name="t_p1rotation">
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>ROTATION</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="8" column="4" rowspan="2" colspan="2">
-                <widget class="PlotWidget" name="P2_TempGraph" native="true">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                </widget>
-               </item>
-               <item row="7" column="7">
-                <widget class="QLabel" name="rotation_p1">
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(85, 170, 127);</string>
-                 </property>
-                 <property name="text">
-                  <string>-00.00-</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="4" rowspan="3" colspan="2">
-                <widget class="PlotWidget" name="C_TempGraph" native="true">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="0">
-                <widget class="QLabel" name="t_cpkg">
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>PKG_COUNT</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="0" colspan="2">
-                <widget class="QLabel" name="t_pl1">
-                 <property name="minimumSize">
-                  <size>
-                   <width>300</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>300</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>20</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 79, 82);</string>
-                 </property>
-                 <property name="text">
-                  <string>PAYLOAD_1</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="2">
-                <widget class="QLabel" name="t_calt">
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>ALTITUDE</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="7" column="3">
-                <widget class="QLabel" name="altitude_p1">
+               <item row="10" column="3">
+                <widget class="QLabel" name="altitude_p2">
                  <property name="minimumSize">
                   <size>
                    <width>150</width>
@@ -1743,8 +1417,8 @@ QProgressBar::chunk{
                  </property>
                 </widget>
                </item>
-               <item row="4" column="3">
-                <widget class="QLabel" name="altitude_c">
+               <item row="9" column="1">
+                <widget class="QLabel" name="pkg_p2">
                  <property name="minimumSize">
                   <size>
                    <width>150</width>
@@ -1770,27 +1444,6 @@ QProgressBar::chunk{
                  </property>
                  <property name="text">
                   <string>-00.00-</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="12" column="8">
-                <widget class="QLabel" name="t_incoming">
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>20</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 79, 82);</string>
-                 </property>
-                 <property name="text">
-                  <string>INCOMING DATA</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -1830,242 +1483,6 @@ QProgressBar::chunk{
                  </property>
                 </widget>
                </item>
-               <item row="10" column="3">
-                <widget class="QLabel" name="altitude_p2">
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(85, 170, 127);</string>
-                 </property>
-                 <property name="text">
-                  <string>-00.00-</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="12" column="1" colspan="2">
-                <widget class="QLabel" name="time_clock">
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>18</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>HH:MM:SS.MS</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="9" column="1">
-                <widget class="QLabel" name="pkg_p2">
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(85, 170, 127);</string>
-                 </property>
-                 <property name="text">
-                  <string>-00.00-</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="2" rowspan="3" colspan="2">
-                <widget class="PlotWidget" name="C_AltitudeGraph" native="true">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                </widget>
-               </item>
-               <item row="8" column="0" colspan="2">
-                <widget class="QLabel" name="t_pl2">
-                 <property name="minimumSize">
-                  <size>
-                   <width>300</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>300</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>20</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 79, 82);</string>
-                 </property>
-                 <property name="text">
-                  <string>PAYLOAD_2</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="0" colspan="2">
-                <widget class="QProgressBar" name="ContainerBar">
-                 <property name="minimumSize">
-                  <size>
-                   <width>300</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QProgressBar{
-	
-	background-color: rgb(107, 125, 180);
-	border-radius: 15px;
-}
-QProgressBar::chunk{
-	border-radius: 15px;
-	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
-}</string>
-                 </property>
-                 <property name="maximum">
-                  <number>0</number>
-                 </property>
-                 <property name="value">
-                  <number>0</number>
-                 </property>
-                 <property name="textVisible">
-                  <bool>false</bool>
-                 </property>
-                </widget>
-               </item>
-               <item row="10" column="6">
-                <widget class="QLabel" name="t_p2rotation">
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>ROTATION</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="10" column="2">
-                <widget class="QLabel" name="t_p2alt">
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="text">
-                  <string>ALTITUDE</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
                <item row="10" column="0" colspan="2">
                 <widget class="QProgressBar" name="PL2Bar">
                  <property name="minimumSize">
@@ -2094,7 +1511,7 @@ QProgressBar::chunk{
 }</string>
                  </property>
                  <property name="maximum">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <property name="value">
                   <number>0</number>
@@ -2104,18 +1521,18 @@ QProgressBar::chunk{
                  </property>
                 </widget>
                </item>
-               <item row="6" column="0">
-                <widget class="QLabel" name="t_p1pkg">
+               <item row="5" column="2" rowspan="2" colspan="2">
+                <widget class="PlotWidget" name="P1_AltitudeGraph" native="true">
                  <property name="minimumSize">
                   <size>
-                   <width>150</width>
-                   <height>0</height>
+                   <width>0</width>
+                   <height>150</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
-                   <width>150</width>
-                   <height>16777215</height>
+                   <width>16777215</width>
+                   <height>150</height>
                   </size>
                  </property>
                  <property name="font">
@@ -2126,16 +1543,58 @@ QProgressBar::chunk{
                    <bold>true</bold>
                   </font>
                  </property>
+                </widget>
+               </item>
+               <item row="12" column="3">
+                <widget class="QLabel" name="t_elapsed">
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>18</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
                  <property name="text">
-                  <string>PKG_COUNT</string>
+                  <string>ELAPSED:</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0" colspan="2">
+                <widget class="QLabel" name="t_pl1">
+                 <property name="minimumSize">
+                  <size>
+                   <width>300</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>300</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 79, 82);</string>
+                 </property>
+                 <property name="text">
+                  <string>PAYLOAD_1</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
-               <item row="8" column="2" rowspan="2" colspan="2">
-                <widget class="PlotWidget" name="P2_AltitudeGraph" native="true">
+               <item row="0" column="2" rowspan="3" colspan="2">
+                <widget class="PlotWidget" name="C_AltitudeGraph" native="true">
                  <property name="minimumSize">
                   <size>
                    <width>0</width>
@@ -2191,8 +1650,65 @@ QProgressBar::chunk{
                  </property>
                 </widget>
                </item>
-               <item row="1" column="1">
-                <widget class="QLabel" name="pkg_c">
+               <item row="8" column="2" rowspan="2" colspan="2">
+                <widget class="PlotWidget" name="P2_AltitudeGraph" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="0" colspan="2">
+                <widget class="QLabel" name="t_pl2">
+                 <property name="minimumSize">
+                  <size>
+                   <width>300</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>300</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 79, 82);</string>
+                 </property>
+                 <property name="text">
+                  <string>PAYLOAD_2</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="3">
+                <widget class="QLabel" name="altitude_p1">
                  <property name="minimumSize">
                   <size>
                    <width>150</width>
@@ -2224,44 +1740,14 @@ QProgressBar::chunk{
                  </property>
                 </widget>
                </item>
-               <item row="5" column="2" rowspan="2" colspan="2">
-                <widget class="PlotWidget" name="P1_AltitudeGraph" native="true">
+               <item row="4" column="0" colspan="2">
+                <widget class="QProgressBar" name="ContainerBar">
                  <property name="minimumSize">
                   <size>
-                   <width>0</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="6">
-                <widget class="QLabel" name="t_gpsalt">
-                 <property name="minimumSize">
-                  <size>
-                   <width>150</width>
+                   <width>300</width>
                    <height>0</height>
                   </size>
                  </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>150</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
                  <property name="font">
                   <font>
                    <family>JetBrains Mono</family>
@@ -2270,26 +1756,25 @@ QProgressBar::chunk{
                    <bold>true</bold>
                   </font>
                  </property>
-                 <property name="text">
-                  <string>GPS_ALT</string>
+                 <property name="styleSheet">
+                  <string notr="true">QProgressBar{
+	
+	background-color: rgb(107, 125, 180);
+	border-radius: 15px;
+}
+QProgressBar::chunk{
+	border-radius: 15px;
+	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
+}</string>
                  </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
+                 <property name="maximum">
+                  <number>1</number>
                  </property>
-                </widget>
-               </item>
-               <item row="12" column="3">
-                <widget class="QLabel" name="t_elapsed">
-                 <property name="font">
-                  <font>
-                   <family>JetBrains Mono</family>
-                   <pointsize>18</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
+                 <property name="value">
+                  <number>0</number>
                  </property>
-                 <property name="text">
-                  <string>ELAPSED:</string>
+                 <property name="textVisible">
+                  <bool>false</bool>
                  </property>
                 </widget>
                </item>
@@ -2353,7 +1838,465 @@ QProgressBar::chunk{
                  </property>
                 </widget>
                </item>
-               <item row="1" column="8" rowspan="5">
+               <item row="1" column="1">
+                <widget class="QLabel" name="pkg_c">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 170, 127);</string>
+                 </property>
+                 <property name="text">
+                  <string>-00.00-</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="2">
+                <widget class="QLabel" name="t_p2alt">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>ALTITUDE</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="2">
+                <widget class="QLabel" name="t_calt">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>ALTITUDE</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="6">
+                <widget class="QLabel" name="t_gpsalt">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>GPS_ALT</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QLabel" name="altitude_c">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 170, 127);</string>
+                 </property>
+                 <property name="text">
+                  <string>-00.00-</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="12" column="1" colspan="2">
+                <widget class="QLabel" name="time_clock">
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>18</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>HH:MM:SS.MS</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QLabel" name="t_p1pkg">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>PKG_COUNT</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="10" column="6">
+                <widget class="QLabel" name="t_p2rotation">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>ROTATION</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="6">
+                <widget class="QLabel" name="t_p1rotation">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>ROTATION</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="7">
+                <widget class="QLabel" name="rotation_p1">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(85, 170, 127);</string>
+                 </property>
+                 <property name="text">
+                  <string>-00.00-</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QLabel" name="t_cpkg">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>PKG_COUNT</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="4" rowspan="2" colspan="2">
+                <widget class="PlotWidget" name="P2_TempGraph" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="4" rowspan="2" colspan="2">
+                <widget class="PlotWidget" name="P1_TempGraph" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0" colspan="2">
+                <widget class="QProgressBar" name="PL1Bar">
+                 <property name="minimumSize">
+                  <size>
+                   <width>300</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QProgressBar{
+	
+	background-color: rgb(107, 125, 180);
+	border-radius: 15px;
+}
+QProgressBar::chunk{
+	border-radius: 15px;
+	background-color: qlineargradient(spread:pad, x1:0,y1:0.511364,x2:1,y2:0.523,stop:0 rgba(254,121,199,255),stop:1 rgba(170,85,255,255))
+}</string>
+                 </property>
+                 <property name="maximum">
+                  <number>1</number>
+                 </property>
+                 <property name="value">
+                  <number>0</number>
+                 </property>
+                 <property name="textVisible">
+                  <bool>false</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="8" column="6" rowspan="2" colspan="2">
+                <widget class="PlotWidget" name="P2_RotationGraph" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="4" rowspan="3" colspan="2">
+                <widget class="PlotWidget" name="C_TempGraph" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>150</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>JetBrains Mono</family>
+                   <pointsize>14</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="8" rowspan="5" colspan="2">
                 <widget class="QWebEngineView" name="MAP">
                  <property name="url">
                   <url>
@@ -2362,7 +2305,7 @@ QProgressBar::chunk{
                  </property>
                 </widget>
                </item>
-               <item row="6" column="8" rowspan="2">
+               <item row="6" column="8" rowspan="2" colspan="2">
                 <layout class="QGridLayout" name="gridLayout_7">
                  <item row="1" column="1" colspan="2">
                   <widget class="QLabel" name="t_latitude">
@@ -2603,27 +2546,358 @@ QProgressBar::chunk{
                  </item>
                 </layout>
                </item>
-               <item row="0" column="6" rowspan="3" colspan="2">
-                <widget class="PlotWidget" name="C_GpsAltitudeGraph" native="true">
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>150</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>150</height>
-                  </size>
-                 </property>
+               <item row="8" column="8" rowspan="3" colspan="2">
+                <layout class="QGridLayout" name="gridLayout_9">
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="IN_1">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="4">
+                  <widget class="QLabel" name="IN_14">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="2">
+                  <widget class="QLabel" name="IN_12">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="IN_0">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QLabel" name="IN_2">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 79, 82);</string>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="3">
+                  <widget class="QLabel" name="IN_3">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 79, 82);</string>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="4">
+                  <widget class="QLabel" name="IN_4">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="IN_5">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QLabel" name="IN_7">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="IN_6">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="QLabel" name="IN_8">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="4">
+                  <widget class="QLabel" name="IN_9">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QLabel" name="IN_11">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QLabel" name="IN_10">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="QLabel" name="IN_13">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QLabel" name="IN_15">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QLabel" name="IN_16">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="2">
+                  <widget class="QLabel" name="IN_17">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="3">
+                  <widget class="QLabel" name="IN_18">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="4">
+                  <widget class="QLabel" name="IN_19">
+                   <property name="font">
+                    <font>
+                     <family>JetBrains Mono</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>TextLabel</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="12" column="8" colspan="2">
+                <widget class="QLabel" name="t_incoming">
                  <property name="font">
                   <font>
                    <family>JetBrains Mono</family>
-                   <pointsize>14</pointsize>
+                   <pointsize>20</pointsize>
                    <weight>75</weight>
                    <bold>true</bold>
                   </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(255, 79, 82);</string>
+                 </property>
+                 <property name="text">
+                  <string>INCOMING DATA</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
