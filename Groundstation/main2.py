@@ -414,6 +414,7 @@ class ScreenActivation:
             self.start_graph(self.ui_main.ui.C_TempGraph, self.c_pkg_graph, self.c_temp_graph)
             self.start_graph(self.ui_main.ui.C_GpsAltitudeGraph, self.c_pkg_graph, self.c_galt_graph)
         self.ui_main.ui.ContainerBar.setProperty("value",1)
+        self.update_table(data[:])
         if self.send:
             mqtt.sendserver(self.MQTT, data)
 
@@ -443,6 +444,7 @@ class ScreenActivation:
             self.start_graph(self.ui_main.ui.P1_TempGraph, self.s1_pkg_graph, self.s1_temp_graph)
             self.start_graph(self.ui_main.ui.P1_RotationGraph, self.s1_pkg_graph, self.s1_rot_graph)
         self.ui_main.ui.PL1Bar.setProperty('value', 1)
+        self.update_table(data[:])
         if self.send:
             mqtt.sendserver(self.MQTT, data)
 
@@ -473,7 +475,7 @@ class ScreenActivation:
             self.start_graph(self.ui_main.ui.P2_TempGraph, self.s2_pkg_graph, self.s2_temp_graph)
             self.start_graph(self.ui_main.ui.P2_RotationGraph, self.s2_pkg_graph, self.s2_rot_graph)
         self.ui_main.ui.PL2Bar.setProperty('value',1)
-        # self.update_table(data[:])
+        self.update_table(data[:])
         if self.send:
             mqtt.sendserver(self.MQTT, data)
 
