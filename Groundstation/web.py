@@ -9,12 +9,12 @@ from time import sleep
 
 def open_browser():
     teamnumber = 3751
-    PATH = "C:\Program Files (x86)\chromedriver.exe"
+    PATH = r"D:\python\Space ac\US-cansat\chromedriver.exe"
     driver = webdriver.Chrome(PATH)
     driver.get("http://cansat.info/plot.html")
     driver.find_element_by_id("team").send_keys(teamnumber)
     driver.find_element_by_xpath("/html/body/p[8]/button").click()
-    sleep(100)
+    sleep(10000)
 
 
 if __name__ == "__main__":

@@ -55,15 +55,22 @@ def sendserver(mqttc, Data):
 
 
 def test():
-    dat = '1111,12:00:00,1,C,F,N,N,1,2,3,12:00:00,4,5,6,7,PRELAUNCH,8,9,10,11,12,13,14,15,16'
-    dat2 = '1,2,3,C,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,11,22,33,S1,44,55,66,00,000,000,S2,0000,00000,000000'
-    with open('Flight/Flight_3571_C-28.csv') as f:
-        Data = f.readlines()
+    C = "3751,15:28:44,227,C,F,R,N,2.93,30.03,3.46,00:00:00,0.000000,0.000000,0.00,0,RELEASED_1,0,0,CXON"
+    S1 = "3751,00:00:00,176,SP1,10.57,28.57,0.60,0.000000,0.000000,9.77,1.41,0.52"
+    S2 = "3751,00:00:00,783,SP2,0.89,35.57,240.52,0.000000,0.000000,9.66,0.39,-0.57"
     while True:
-        for i in range(len(Data)):
-            time.sleep(1)
-            mqttc.publish('teams/3751', Data[i])  # send the line of data
-            print(Data[i])
+        time.sleep(0.1)
+        mqttc.publish('teams/3751', C)  # send the line of data
+        print(C)
+        time.sleep(0.1)
+        mqttc.publish('teams/3751', S1)  # send the line of data
+        print(S1)
+        time.sleep(0.1)
+        mqttc.publish('teams/3751', S2)  # send the line of data
+        print(S2)
+        time.sleep(0.7)
+        print("pingsen")
+
 
 
 if __name__ == "__main__":

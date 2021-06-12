@@ -54,7 +54,7 @@ class MainWindow(QMainWindow):
         self.ui.filename.setText(file)
         self.ui.btn_refresh.clicked.connect(self.refresh)
         self.ui.btn_connect.clicked.connect(self.connect)
-        self.ui.btn_mqtt.clicked.connect(web.open_browser)
+        self.ui.btn_mqtt.clicked.connect(self.thread2)
         self.ui.btn_clear.clicked.connect(Window.clear)
         self.ui.btn_map.clicked.connect(Window.update_map)
 
@@ -104,6 +104,10 @@ class MainWindow(QMainWindow):
         self.x = threading.Thread(target=self.sim)
         self.x.start()
 
+    def thread2(self):
+        self.x1 = threading.Thread(target=web.open_browser)
+        self.x1.start()
+
     def sim(self):
         Window.clear()
         file = 'sim.txt'
@@ -124,7 +128,7 @@ class MainWindow(QMainWindow):
             print("ERROR NO FILE!")
 
     def connect(self):
-        # Window.connectserver()
+        Window.connectserver()
         self.A = self.ui.Portlist.currentText()
         try:
             self.device = serial.Serial(self.A, baudrate=int(9600), timeout=60)
@@ -198,27 +202,28 @@ class ThreadMain(QThread):
             self.pkg = self.port.reading()
             print(f"[THREAD_IN] : {self.pkg}")
             if self.pkg[3] == 'C':
-                print('[CANSAT]',end="")
+                print('[CANSAT]', end="")
                 self.pkg1 = self.pkg[:]  # pkgc
                 self.carrier1.emit(self.pkg1)
-            elif self.pkg[3] == 'S1':
-                print('[PAYLOAD1]',end="")
+            elif self.pkg[3] == 'SP1':
+                print('[PAYLOAD1]', end="")
                 self.pkg2 = self.pkg[:]  # pkgc
                 self.carrier2.emit(self.pkg2)
-            elif self.pkg[3] == 'S2':
-                print('[PAYLOAD2]',end="")
+            elif self.pkg[3] == 'SP2':
+                print('[PAYLOAD2]', end="")
                 self.pkg3 = self.pkg[:]  # pkgc
                 self.carrier3.emit(self.pkg3)
 
     def stop(self):
         self._isRunning = False
 
-class ThreadGraph(QThread):
-    Isgraph = QtCore.pyqtSignal(object,list,list)
 
-    def __init__(self, graph, x, y, parent = None):
+class ThreadGraph(QThread):
+    Isgraph = QtCore.pyqtSignal(object, list, list)
+
+    def __init__(self, graph, x, y, parent=None):
         self._isRunning = True
-        super(ThreadGraph,self).__init__(parent)
+        super(ThreadGraph, self).__init__(parent)
         self.graph = graph
         self.x = x
         self.y = y
@@ -227,11 +232,12 @@ class ThreadGraph(QThread):
         self.wait()
 
     def run(self):
-        self.Isgraph.emit(self.graph,self.x,self.y)
+        self.Isgraph.emit(self.graph, self.x, self.y)
 
     def stop(self):
         self._isRunning = False
         self.terminate()
+
 
 class ThreadTimer(QThread):
     time_carrier = QtCore.pyqtSignal(object)
@@ -327,17 +333,22 @@ class ScreenActivation:
     def show_splash(self):
         self.window_splash = QtWidgets.QMainWindow()
         self.ui_ui = SplashScreen()
-        print('[SPLASHSCREEN]',end="")
+        print('[SPLASHSCREEN]', end="")
 
     def show_ui(self):
         self.window_ui = QtWidgets.QMainWindow()
         self.ui_main = MainWindow()
         self.clear()
-        self.table = (self.ui_main.ui.IN_0,self.ui_main.ui.IN_1,self.ui_main.ui.IN_2,self.ui_main.ui.IN_3,self.ui_main.ui.IN_4,
-                      self.ui_main.ui.IN_5,self.ui_main.ui.IN_6,self.ui_main.ui.IN_7,self.ui_main.ui.IN_8,self.ui_main.ui.IN_9,
-                      self.ui_main.ui.IN_10,self.ui_main.ui.IN_11,self.ui_main.ui.IN_12,self.ui_main.ui.IN_13,self.ui_main.ui.IN_14,
-                      self.ui_main.ui.IN_15,self.ui_main.ui.IN_16,self.ui_main.ui.IN_17,self.ui_main.ui.IN_18,self.ui_main.ui.IN_19,)
-        print('[MAINWINDOW]',end="")
+        self.table = (
+            self.ui_main.ui.IN_0, self.ui_main.ui.IN_1, self.ui_main.ui.IN_2, self.ui_main.ui.IN_3,
+            self.ui_main.ui.IN_4,
+            self.ui_main.ui.IN_5, self.ui_main.ui.IN_6, self.ui_main.ui.IN_7, self.ui_main.ui.IN_8,
+            self.ui_main.ui.IN_9,
+            self.ui_main.ui.IN_10, self.ui_main.ui.IN_11, self.ui_main.ui.IN_12, self.ui_main.ui.IN_13,
+            self.ui_main.ui.IN_14,
+            self.ui_main.ui.IN_15, self.ui_main.ui.IN_16, self.ui_main.ui.IN_17, self.ui_main.ui.IN_18,
+            self.ui_main.ui.IN_19,)
+        print('[MAINWINDOW]', end="")
 
     def start_clock(self):
         self.worker_time = ThreadTimer()
@@ -367,7 +378,7 @@ class ScreenActivation:
         self.ui_main.ui.elapsed_clock.setText(time)
 
     def update_container(self, data):
-        print("[UPDATE_CONTAINER]",end="")
+        print("[UPDATE_CONTAINER]", end="")
         self.c_time = GetTime.time_pc()
         self.c_pkg = int(data[2])
         self.c_pkg_graph.append(self.c_pkg)
@@ -402,7 +413,7 @@ class ScreenActivation:
         elif self.c_state == "LAND":
             self.ui_main.ui.StateBar.setProperty('value', 5)
 
-        if len(self.c_pkg_graph)>=30:
+        if len(self.c_pkg_graph) >= 30:
             self.ui_main.ui.C_AltitudeGraph.clear()
             self.ui_main.ui.C_TempGraph.clear()
             self.ui_main.ui.C_GpsAltitudeGraph.clear()
@@ -413,13 +424,13 @@ class ScreenActivation:
             self.start_graph(self.ui_main.ui.C_AltitudeGraph, self.c_pkg_graph, self.c_alt_graph)
             self.start_graph(self.ui_main.ui.C_TempGraph, self.c_pkg_graph, self.c_temp_graph)
             self.start_graph(self.ui_main.ui.C_GpsAltitudeGraph, self.c_pkg_graph, self.c_galt_graph)
-        self.ui_main.ui.ContainerBar.setProperty("value",1)
+        self.ui_main.ui.ContainerBar.setProperty("value", 1)
         self.update_table(data[:])
         if self.send:
             mqtt.sendserver(self.MQTT, data)
 
     def update_payload1(self, data):
-        print("[UPDATE_SP1]",end="")
+        print("[UPDATE_SP1]", end="")
         self.s1_time = GetTime.time_pc()
         self.s1_pkg = int(data[2])
         self.s1_pkg_graph.append(self.s1_pkg)
@@ -432,8 +443,8 @@ class ScreenActivation:
         self.s1_latitude = data[7]
         self.s1_longitude = data[8]
         self.update_main()
-        if len(self.s1_pkg_graph)>=30:
-            self.ui_main.ui.P1_AltitudeGraphclear()
+        if len(self.s1_pkg_graph) >= 30:
+            self.ui_main.ui.P1_AltitudeGraph.clear()
             self.ui_main.ui.P1_TempGraph.clear()
             self.ui_main.ui.P1_RotationGraph.clear()
             self.start_graph(self.ui_main.ui.P1_AltitudeGraph, self.s1_pkg_graph[-30:-1], self.s1_alt_graph[-30:-1])
@@ -449,7 +460,7 @@ class ScreenActivation:
             mqtt.sendserver(self.MQTT, data)
 
     def update_payload2(self, data):
-        print("[UPDATE_SP2]",end="")
+        print("[UPDATE_SP2]", end="")
         self.s2_time = GetTime.time_pc()
         self.s2_pkg = int(data[2])
         self.s2_pkg_graph.append(self.s2_pkg)
@@ -463,7 +474,7 @@ class ScreenActivation:
         self.s2_latitude = data[7]
         self.s2_longitude = data[8]
 
-        if len(self.s2_pkg_graph)>=30:
+        if len(self.s2_pkg_graph) >= 30:
             self.ui_main.ui.P2_AltitudeGraph.clear()
             self.ui_main.ui.P2_TempGraph.clear()
             self.ui_main.ui.P2_RotationGraph.clear()
@@ -474,7 +485,7 @@ class ScreenActivation:
             self.start_graph(self.ui_main.ui.P2_AltitudeGraph, self.s2_pkg_graph, self.s2_alt_graph)
             self.start_graph(self.ui_main.ui.P2_TempGraph, self.s2_pkg_graph, self.s2_temp_graph)
             self.start_graph(self.ui_main.ui.P2_RotationGraph, self.s2_pkg_graph, self.s2_rot_graph)
-        self.ui_main.ui.PL2Bar.setProperty('value',1)
+        self.ui_main.ui.PL2Bar.setProperty('value', 1)
         self.update_table(data[:])
         if self.send:
             mqtt.sendserver(self.MQTT, data)
@@ -499,15 +510,14 @@ class ScreenActivation:
         self.ui_main.ui.temp_p2.setText(str(self.s2_temp))
         self.ui_main.ui.rotation_p2.setText(str(self.s2_rotation))
 
-
     def start_graph(self, graph, x, y):
-        self.worker_graph = ThreadGraph(graph,x,y)
+        self.worker_graph = ThreadGraph(graph, x, y)
         self.worker_graph.Isgraph.connect(self.update_graph)
         self.worker_graph.start()
 
-    def update_graph(self, graph ,x ,y):
+    def update_graph(self, graph, x, y):
         try:
-            graph.plot(x,y)
+            graph.plot(x, y)
         except:
             pass
         else:
@@ -515,16 +525,14 @@ class ScreenActivation:
 
     def update_table(self, data):
         try:
-            l = len(self.table)-len(data)
+            l = len(self.table) - len(data)
             for i in range(len(data)):
                 self.table[i].setText(str(data[i]))
             for i in range(l):
-                self.table[len(data)+i].setText(" ")
+                self.table[len(data) + i].setText(" ")
         except:
             for i in range(len(self.table)):
-                self.table[len(data)+i].setText(" ")
-
-
+                self.table[len(data) + i].setText(" ")
 
     def update_map(self):
         print("[UPDATEMAP]")

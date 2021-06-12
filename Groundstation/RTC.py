@@ -25,7 +25,7 @@ class GetTime:
 
     @staticmethod
     def time_UTC():
-        stime = datetime.now().time()
+        stime = datetime.utcnow().time()
         timestp = str('%02d' % stime.hour) + ':' + str('%02d' % stime.minute) + ':' + str('%02d' % stime.second)
         return timestp
 
@@ -46,3 +46,6 @@ class GetTime:
         time.sleep(0.01)
 
         return timestp
+
+if __name__ == '__main__':
+    print(GetTime.time_UTC())

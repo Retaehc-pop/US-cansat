@@ -93,9 +93,9 @@ class Port:
                     Data = recieved.split(',')
 
                     # checkdata
-                    print(f"[READING] : {Data}")
+                    # print(f"[READING] : {Data}")
                     if Data[3] == 'C':
-
+                        Data[0] = "3751"
                         with open(self.PATH[0], 'a') as file:
                             for i in range(len(Data)):
                                 file.write(Data[i])
@@ -103,7 +103,7 @@ class Port:
                             file.write("\n")
                         return Data
 
-                    elif Data[3] == 'S1':  # team,time,pkg,s1,alt,temp,rotation,latitude,longitude
+                    elif Data[3] == 'SP1':  # team,time,pkg,s1,alt,temp,rotation,latitude,longitude
                         self.isInt(Data[2])
                         self.isFloat(Data[4])
                         self.isFloat(Data[5])
@@ -117,7 +117,7 @@ class Port:
                             file.write("\n")
                         return Data
 
-                    elif Data[3] == 'S2':
+                    elif Data[3] == 'SP2':
                         self.isInt(Data[2])
                         self.isFloat(Data[4])
                         self.isFloat(Data[5])
