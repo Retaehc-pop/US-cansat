@@ -326,9 +326,10 @@ class ScreenActivation:
         self.ui_main.ui.P2_AltitudeGraph.clear()
         self.ui_main.ui.P2_TempGraph.clear()
         self.ui_main.ui.P2_RotationGraph.clear()
-        self.ui_main.ui.ContainerBar.setMaximum(1)
-        self.ui_main.ui.PL1Bar.setMaximum(1)
-        self.ui_main.ui.PL2Bar.setMaximum(1)
+        # self.ui_main.ui.ContainerBar.setMaximum(1)
+        # self.ui_main.ui.PL1Bar.setMaximum(1)
+        # self.ui_main.ui.PL2Bar.setMaximum(1)
+        # self.ui_main.ui.ContainerBar.setProperty("value", 0)
 
     def show_splash(self):
         self.window_splash = QtWidgets.QMainWindow()
