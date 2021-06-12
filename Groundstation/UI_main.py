@@ -1497,6 +1497,7 @@ class Ui_MainWindow(object):
         self.IN_7.setText(_translate("MainWindow", "TextLabel"))
         self.IN_6.setText(_translate("MainWindow", "TextLabel"))
         self.IN_8.setText(_translate("MainWindow", "TextLabel"))
+
         self.IN_9.setText(_translate("MainWindow", "TextLabel"))
         self.IN_11.setText(_translate("MainWindow", "TextLabel"))
         self.IN_10.setText(_translate("MainWindow", "TextLabel"))
