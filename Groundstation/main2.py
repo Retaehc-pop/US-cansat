@@ -109,8 +109,7 @@ class MainWindow(QMainWindow):
         self.x1.start()
 
     def sim(self):
-        Window.clear()
-        file = 'sim.txt'
+        file = 'Cansat_2021_sim_file_B.txt'
         self.ui.filename.setText(file)
         print(f"simulating : {file}")
         if os.path.exists(f"SIM/{file}"):
@@ -122,13 +121,13 @@ class MainWindow(QMainWindow):
                     data = data.replace('$', '3751')
                     data = data.replace('\n', '')
                     self.device.write((data + "$").encode())
-                    time.sleep(0.95)
-                    print(data)
+                    time.sleep(0.99)
+                    print(data + "$")
         else:
             print("ERROR NO FILE!")
 
     def connect(self):
-        Window.connectserver()
+        # Window.connectserver()
         self.A = self.ui.Portlist.currentText()
         try:
             self.device = serial.Serial(self.A, baudrate=int(9600), timeout=60)
@@ -426,6 +425,17 @@ class ScreenActivation:
             self.start_graph(self.ui_main.ui.C_TempGraph, self.c_pkg_graph, self.c_temp_graph)
             self.start_graph(self.ui_main.ui.C_GpsAltitudeGraph, self.c_pkg_graph, self.c_galt_graph)
         self.ui_main.ui.ContainerBar.setProperty("value", 1)
+
+        if self.c_sp1r == "R":
+            self.ui_main.ui.PL1Bar.setProperty('value', 1)
+        else:
+            self.ui_main.ui.PL1Bar.setProperty('value', 0)
+
+        if self.c_sp2r == "R":
+            self.ui_main.ui.PL2Bar.setProperty('value', 1)
+        else:
+            self.ui_main.ui.PL2Bar.setProperty('value', 0)
+
         self.update_table(data[:])
         if self.send:
             mqtt.sendserver(self.MQTT, data)
@@ -441,8 +451,8 @@ class ScreenActivation:
         self.s1_temp_graph.append(self.s1_temp)
         self.s1_rotation = round(float(data[6]), 2)
         self.s1_rot_graph.append(self.s1_rotation)
-        self.s1_latitude = data[7]
-        self.s1_longitude = data[8]
+        # self.s1_latitude = data[7]
+        # self.s1_longitude = data[8]
         self.update_main()
         if len(self.s1_pkg_graph) >= 30:
             self.ui_main.ui.P1_AltitudeGraph.clear()
@@ -455,7 +465,7 @@ class ScreenActivation:
             self.start_graph(self.ui_main.ui.P1_AltitudeGraph, self.s1_pkg_graph, self.s1_alt_graph)
             self.start_graph(self.ui_main.ui.P1_TempGraph, self.s1_pkg_graph, self.s1_temp_graph)
             self.start_graph(self.ui_main.ui.P1_RotationGraph, self.s1_pkg_graph, self.s1_rot_graph)
-        self.ui_main.ui.PL1Bar.setProperty('value', 1)
+
         self.update_table(data[:])
         if self.send:
             mqtt.sendserver(self.MQTT, data)
@@ -472,8 +482,8 @@ class ScreenActivation:
         self.s2_rotation = round(float(data[6]), 2)
         self.s2_rot_graph.append(self.s2_rotation)
         self.update_main()
-        self.s2_latitude = data[7]
-        self.s2_longitude = data[8]
+        # self.s2_latitude = data[7]
+        # self.s2_longitude = data[8]
 
         if len(self.s2_pkg_graph) >= 30:
             self.ui_main.ui.P2_AltitudeGraph.clear()
@@ -486,7 +496,7 @@ class ScreenActivation:
             self.start_graph(self.ui_main.ui.P2_AltitudeGraph, self.s2_pkg_graph, self.s2_alt_graph)
             self.start_graph(self.ui_main.ui.P2_TempGraph, self.s2_pkg_graph, self.s2_temp_graph)
             self.start_graph(self.ui_main.ui.P2_RotationGraph, self.s2_pkg_graph, self.s2_rot_graph)
-        self.ui_main.ui.PL2Bar.setProperty('value', 1)
+
         self.update_table(data[:])
         if self.send:
             mqtt.sendserver(self.MQTT, data)
@@ -539,10 +549,10 @@ class ScreenActivation:
         print("[UPDATEMAP]")
         self.ui_main.ui.latitude_c.setText(str(self.c_coord[-1][0]))
         self.ui_main.ui.longitude_c.setText(str(self.c_coord[-1][0]))
-        self.ui_main.ui.latitude_p1.setText(str(self.s1_latitude))
-        self.ui_main.ui.longitude_p1.setText(str(self.s1_longitude))
-        self.ui_main.ui.latitude_p2.setText(str(self.s2_latitude))
-        self.ui_main.ui.longitude_p2.setText(str(self.s2_longitude))
+        self.ui_main.ui.latitude_p1.setText(str(13.723073))
+        self.ui_main.ui.longitude_p1.setText(str(100.51611))
+        self.ui_main.ui.latitude_p2.setText(str(13.723235))
+        self.ui_main.ui.longitude_p2.setText(str(100.516045))
         dt = maps.getmap(self.c_coord[-1], self.c_coord, self.altitude)
         self.ui_main.ui.MAP.setHtml(dt.getvalue().decode())
 

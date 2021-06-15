@@ -103,13 +103,7 @@ class Port:
                             file.write("\n")
                         return Data
 
-                    elif Data[3] == 'SP1':  # team,time,pkg,s1,alt,temp,rotation,latitude,longitude
-                        self.isInt(Data[2])
-                        self.isFloat(Data[4])
-                        self.isFloat(Data[5])
-                        self.isFloat(Data[6])
-                        self.isFloat(Data[7])
-                        self.isFloat(Data[8])
+                    elif Data[3] == 'SP1':
                         with open(self.PATH[1], 'a') as file:
                             for i in range(len(Data)):
                                 file.write(Data[i])
@@ -118,12 +112,6 @@ class Port:
                         return Data
 
                     elif Data[3] == 'SP2':
-                        self.isInt(Data[2])
-                        self.isFloat(Data[4])
-                        self.isFloat(Data[5])
-                        self.isFloat(Data[6])
-                        self.isFloat(Data[7])
-                        self.isFloat(Data[8])
                         with open(self.PATH[2], 'a') as file:
                             for i in range(len(Data)):
                                 file.write(Data[i])
